@@ -159,12 +159,12 @@
   },
   "__edge_ssr_module_mapping__": {},
   "__entry_css_files__": {
-    "D:\\myProject\\frontEnd\\my-app\\app\\layout": [
+    "D:\\MVPTrade\\project.mvp\\app\\layout": [
       "static/css/_app-client_app_globals_css.css",
       "static/css/_app-client_node_modules_next_font_google_target_css_path_app_layout_js_import_Inter_argument-fdc9cb.css"
     ]
   },
-  "D:\\myProject\\frontEnd\\my-app\\components\\NavBar\\NavBar.jsx": {
+  "D:\\MVPTrade\\project.mvp\\components\\NavBar\\NavBar.jsx": {
     "": {
       "id": "(app-client)/./components/NavBar/NavBar.jsx",
       "name": "",
@@ -190,7 +190,7 @@
       "async": false
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\components\\Provider.jsx": {
+  "D:\\MVPTrade\\project.mvp\\components\\Provider.jsx": {
     "": {
       "id": "(app-client)/./components/Provider.jsx",
       "name": "",
@@ -216,7 +216,7 @@
       "async": false
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+  "D:\\MVPTrade\\project.mvp\\node_modules\\next\\dist\\client\\components\\app-router.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "",
@@ -242,7 +242,7 @@
       "async": false
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+  "D:\\MVPTrade\\project.mvp\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
@@ -268,7 +268,7 @@
       "async": false
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+  "D:\\MVPTrade\\project.mvp\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "",
@@ -294,7 +294,7 @@
       "async": false
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+  "D:\\MVPTrade\\project.mvp\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "",
@@ -320,7 +320,7 @@
       "async": false
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
+  "D:\\MVPTrade\\project.mvp\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
     "default": {
       "id": "null",
       "name": "default",
@@ -329,7 +329,7 @@
       ]
     }
   },
-  "D:\\myProject\\frontEnd\\my-app\\app\\globals.css": {
+  "D:\\MVPTrade\\project.mvp\\app\\globals.css": {
     "default": {
       "id": "null",
       "name": "default",

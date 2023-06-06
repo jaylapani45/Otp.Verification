@@ -1,11 +1,11 @@
 {
   "__entry_css_mods__": {
-    "D:\\myProject\\frontEnd\\my-app\\app\\page": [
-      "D:\\myProject\\frontEnd\\my-app\\app\\globals.css"
+    "D:\\MVPTrade\\project.mvp\\app\\page": [
+      "D:\\MVPTrade\\project.mvp\\app\\globals.css"
     ]
   },
-  "D:\\myProject\\frontEnd\\my-app\\app\\layout.js": [
-    "D:\\myProject\\frontEnd\\my-app\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
-    "D:\\myProject\\frontEnd\\my-app\\app\\globals.css"
+  "D:\\MVPTrade\\project.mvp\\app\\layout.js": [
+    "D:\\MVPTrade\\project.mvp\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
+    "D:\\MVPTrade\\project.mvp\\app\\globals.css"
   ]
 }
