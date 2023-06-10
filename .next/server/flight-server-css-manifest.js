@@ -1,11 +1,11 @@
 self.__RSC_CSS_MANIFEST={
   "__entry_css_mods__": {
-    "D:\\MVPTrade\\project.mvp\\app\\page": [
-      "D:\\MVPTrade\\project.mvp\\app\\globals.css"
+    "D:\\ah\\project.mvp\\app\\page": [
+      "D:\\ah\\project.mvp\\app\\globals.css"
     ]
   },
-  "D:\\MVPTrade\\project.mvp\\app\\layout.js": [
-    "D:\\MVPTrade\\project.mvp\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
-    "D:\\MVPTrade\\project.mvp\\app\\globals.css"
+  "D:\\ah\\project.mvp\\app\\layout.js": [
+    "D:\\ah\\project.mvp\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
+    "D:\\ah\\project.mvp\\app\\globals.css"
   ]
 }

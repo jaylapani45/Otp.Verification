@@ -1,87 +1,104 @@
-//This is gonna be HomePage
-// import onlyLogo from '../public/assets/onlyLogo.png'
-export default function Page() {
-  return (
-//   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-//       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-//       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
-//       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-      
-      
-//       {/* <link rel="stylesheet" href="scss/style.scss"/>
-//       <link rel="stylesheet" href="css/Main_Style.css"/>
-//       <script src="js/Main_page.js" defer></script> */}
-  
-    //   <nav class="navbar navbar-expand-lg">
-    //       <div class="container-fluid">
-    //           <a href="#" class="navbar-brand"><image src={mypic}></image></a>
-              
-    //           <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"/>
-    //           <button type="button"class="navbar-toggler ml-auto custom-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-    //               <img src="drop-down-menu.png" alt="" height="35px" width="35px"/>
-    //           </button>
-    //           <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-    //               <div class="navbar-nav">
-    //                   <a href="#" class="nav-item nav-link active">Home</a>
-    //                   <a href="#" class="nav-item nav-link">Profile</a>
-    //                   <div class="nav-item dropdown">
-    //                       <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Messages</a>
-    //                       <div class="dropdown-menu">
-    //                           <a href="#" class="dropdown-item">Inbox</a>
-    //                           <a href="#" class="dropdown-item">Sent</a>
-    //                           <a href="#" class="dropdown-item">Drafts</a>
-    //                       </div>
-    //                   </div>
-    //               </div>
-    //               <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; margin-inline: 10px;">
-    //               <form class="d-flex">
-    //                   <div class="input-group">
-    //                       <button type="button" style="background: none; border-top: none; border-left: none; border-right: none; border-bottom: 2px solid white; border-radius: 0px;"><img src="components-search.png" height="25px" width="25px" alt="" /></button>
-    //                       <input id="search" type="text" class="form-control" placeholder="Search" style="margin-right: 20px;"/>
-    //                   </div>
-    //               </form>
-    //               <div class="navbar-nav">
-    //                   <a href="#" class="nav-item nav-link" style="padding-left: 20px; border-left: 1px solid white;">Login</a>
-    //               </div>
-    //               </div>
-    //           </div>
-    //       </div>
-    //   </nav>
-      
-  
-  
-  
-  
-      <div id="mainDiv">
-         {/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/> */}
-       {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/> */}
-      {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> */}
-      
-          <div class="container" id="logo">
-              <img class="my-logo desktop-logo" src = "assets/components-logo.png" alt="Desktop logo"/>
-              <img class="my-logo tab-logo" src="assets/components-logo-mobile.png" alt="Tablate logo"/>
-              <img class="my-logo mobile-logo" src="assets/components-logo-mobile.png" alt="Mobile logo"/>
-          </div>
-          <div class="container" id="component">
-              
-              <img class="my-img desktop-img" src="assets/components-imaes.png" alt="Desktop Image"/>
-              <img class="my-img mobile-img" src="assets/components-images-mobile.png" alt="Mobile Image"/>
-  
-          </div>
-          <div class="bottom">
-              <p class="text">
-                  Discover a world of gaming greatness through our platform, where gamers connect, exchange, and
-                  conquer together.
-                  Seamlessly trade game accounts and unlock a wealth of thrilling experiences. Embrace the power of
-                  community as you journey towards gaming victory.
-  
-              </p>
-              <div class="btn-group" id="btn" role="group" aria-label="Basic example">
-                  <button type="button" id="btnMrg">BUY</button>
-                  <button type="button">SELL</button>
-              </div>
-          </div>
-      </div>)
-  
-  
+'use client'
+import firebase from './firebase';
+import firebase1 from 'firebase/app';
+import 'firebase/app';
+import React from 'react';
+import { getAuth, RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+// import { getAuth, signInWithPhoneNumber } from "firebase/auth";
+
+
+// export default function HomePage() {
+export default class page extends React.Component {
+    handleChange = (e) => {
+        const { name, value } = e.target
+        this.setState(
+            {
+                [name]: value,
+            }
+        );
+    };
+    configureCaptcha = () => {
+
+        const auth = getAuth();
+        window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
+            'size': 'invisible',
+            'callback': (response) => {
+                // reCAPTCHA solved, allow signInWithPhoneNumber.
+                onSignInSubmit();
+                console.log("recaptcha verified");
+            },
+            defaultCountry: "IN"
+        }, auth);
+    };
+    onSubmitOtp = (e) => {
+        e.preventDefault();
+        const code = this.state.otp;
+        console.log(code);
+        confirmationResult.confirm(code).then((result) => {
+            // User signed in successfully.
+            const user = result.user;
+            console.log(JSON.stringify(user));
+            console.log("Otp Verified");
+            alert("User is Verified");
+            // ...
+        }).catch((error) => {
+            // User couldn't sign in (bad verification code?)
+            // ...
+        });
+
+    }
+
+    onSignInSubmit = (e) => {
+        e.preventDefault();
+        this.configureCaptcha();
+
+        const phoneNumber = "+91" + this.state.mobile;
+        console.log(phoneNumber);
+        const appVerifier = window.recaptchaVerifier;
+
+        const auth = getAuth();
+        signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+            .then((confirmationResult) => {
+                // SMS sent. Prompt user to type the code from the message, then sign the
+                // user in with confirmationResult.confirm(code).
+                window.confirmationResult = confirmationResult;
+                console.log("otp sent");
+                // ...
+            }).catch((error) => {
+                console.log("otp not sent");
+                // Error; SMS not sent
+                // ...
+            });
+    };
+    //   const sendVerificationCode = () => {
+    //     const phoneNumber = "+1234567890"; // Enter the phone number you want to verify here
+
+    //     const appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container'); // Replace 'recaptcha-container' with the ID of your reCAPTCHA container element
+
+    //     firebase.auth.signInWithPhoneNumber(phoneNumber,appVerifier)
+    //       .then((confirmationResult) => {
+    //         const verificationId = confirmationResult.verificationId;
+    //         localStorage.setItem('verificationId', verificationId);
+    //         // Proceed with the OTP verification
+    //       })
+    //       .catch((error) => {
+    //         console.error(error);
+    //       });
+    //   }
+    render() {
+        return (
+            <div>
+                <h1>Welcome to my Next.js app</h1>
+                <form onSubmit={this.onSignInSubmit}>
+                    <div id='sign-in-button'></div>
+                    <input type='number' name='mobile' placeholder='Enter Mobile Number' required onChange={this.handleChange}></input>
+                    <button type='submit'>Submit</button>
+                </form>
+                <form onSubmit={this.onSubmitOtp}>
+                    <input type='number' name='otp' placeholder='Enter otp Number' required onChange={this.handleChange}></input>
+                    <button type='submit'>Verify</button>
+                </form>
+            </div>
+        );
+    }
 }

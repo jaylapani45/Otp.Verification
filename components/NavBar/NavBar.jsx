@@ -27,23 +27,10 @@ const Nav = () => {
 
 
   return (
-<<<<<<< HEAD
-    <nav className='flex-between w-full mb-16 pt-3'>
-      <Link href='/' className='flex gap-2 flex-center'>
-        <Image
-          src='/assets/m.jpg'
-          alt='logo'
-          width={30}
-          height={30}
-          className='object-contain'
-        />
-        <p className='logo_text'>Promptopia</p>
-      </Link>
-=======
     // <nav className='flex-between w-full mb-16 pt-3'>
     //   <Link href='/' className='flex gap-2 flex-center'>
     //     <Image
-    //       src='/assets/images/logo.svg'
+    //       src='/assets/m.jpg'
     //       alt='logo'
     //       width={30}
     //       height={30}
@@ -51,9 +38,8 @@ const Nav = () => {
     //     />
     //     <p className='logo_text'>Promptopia</p>
     //   </Link>
->>>>>>> 868398b7e9ce5684bdb98d7ee828a776c2ed6f81
 
-    //   {/* {alert(providers)} */}
+    // //</nav>   {/* {alert(providers)} */}
 
     //   {/* Desktop Navigation */}
     //   <div className='sm:flex hidden'>
